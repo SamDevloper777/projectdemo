@@ -59,3 +59,80 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+# Install PHP dependencies via Composer
+# This command reads the composer.json file and installs all required packages
+composer install
+
+# Install JavaScript/Node.js dependencies
+# This sets up frontend tools like Vite, which Laravel uses for asset compilation
+npm install
+
+# Compile assets for development with hot reloading
+# This is useful during development as it automatically refreshes when files change
+npm run dev
+
+# Compile and minify assets for production
+# Use this when deploying to a production environment for optimized performance
+npm run build
+
+# Copy environment configuration file
+# The .env file contains environment-specific settings like database credentials
+cp .env.example .env
+
+# Generate application encryption key
+# This key is used for encrypting cookies and other secure data
+php artisan key:generate
+
+
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+# Using database queues for background job processing
+# This is more reliable than the default 'sync' driver for production
+QUEUE_CONNECTION=database
+
+
+
+
+
+
+
+
+# Run database migrations
+# This creates all the necessary tables in your database
+php artisan migrate
+
+# (Optional) Seed the database with sample data
+# Useful for testing and development with placeholder content
+php artisan db:seed
+
+# Process queued jobs
+# Important for handling background tasks like email sending
+php artisan queue:work
+
+
+
+# Run the test suite
+# Ensure your application works correctly before deployment
+php artisan test
+
+# Clear various caches
+# These commands help resolve issues with cached configuration, routes, or views
+php artisan cache:clear                    # Clear application cache
+php artisan config:clear                   # Clear config cache
+php artisan route:clear                    # Clear route cache
+php artisan view:clear                     # Clear compiled views
+
+# (Optional) Optimize the application for production
+php artisan optimize
+
+
