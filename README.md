@@ -52,7 +52,7 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+#### Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
@@ -62,28 +62,28 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 
-# Install PHP dependencies via Composer
-# This command reads the composer.json file and installs all required packages
+### Install PHP dependencies via Composer
+### This command reads the composer.json file and installs all required packages
 composer install
 
-# Install JavaScript/Node.js dependencies
-# This sets up frontend tools like Vite, which Laravel uses for asset compilation
+### Install JavaScript/Node.js dependencies
+### This sets up frontend tools like Vite, which Laravel uses for asset compilation
 npm install
 
-# Compile assets for development with hot reloading
-# This is useful during development as it automatically refreshes when files change
+### Compile assets for development with hot reloading
+### This is useful during development as it automatically refreshes when files change
 npm run dev
 
-# Compile and minify assets for production
-# Use this when deploying to a production environment for optimized performance
+### Compile and minify assets for production
+### Use this when deploying to a production environment for optimized performance
 npm run build
 
-# Copy environment configuration file
-# The .env file contains environment-specific settings like database credentials
+### Copy environment configuration file
+### The .env file contains environment-specific settings like database credentials
 cp .env.example .env
 
-# Generate application encryption key
-# This key is used for encrypting cookies and other secure data
+### Generate application encryption key
+### This key is used for encrypting cookies and other secure data
 php artisan key:generate
 
 
@@ -96,8 +96,8 @@ DB_DATABASE=your_database
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
-# Using database queues for background job processing
-# This is more reliable than the default 'sync' driver for production
+### Using database queues for background job processing
+### This is more reliable than the default 'sync' driver for production
 QUEUE_CONNECTION=database
 
 
@@ -107,32 +107,32 @@ QUEUE_CONNECTION=database
 
 
 
-# Run database migrations
-# This creates all the necessary tables in your database
+### Run database migrations
+### This creates all the necessary tables in your database
 php artisan migrate
 
-# (Optional) Seed the database with sample data
-# Useful for testing and development with placeholder content
+### (Optional) Seed the database with sample data
+### Useful for testing and development with placeholder content
 php artisan db:seed
 
-# Process queued jobs
-# Important for handling background tasks like email sending
+### Process queued jobs
+### Important for handling background tasks like email sending
 php artisan queue:work
 
 
 
-# Run the test suite
-# Ensure your application works correctly before deployment
+### Run the test suite
+### Ensure your application works correctly before deployment
 php artisan test
 
-# Clear various caches
-# These commands help resolve issues with cached configuration, routes, or views
+### Clear various caches
+### These commands help resolve issues with cached configuration, routes, or views
 php artisan cache:clear                    # Clear application cache
 php artisan config:clear                   # Clear config cache
 php artisan route:clear                    # Clear route cache
 php artisan view:clear                     # Clear compiled views
 
-# (Optional) Optimize the application for production
+### (Optional) Optimize the application for production
 php artisan optimize
 
 
